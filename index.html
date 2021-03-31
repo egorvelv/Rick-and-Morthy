@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rick and Morthy</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/hero.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/characters.css">
+
+</head>
+
+<body style="background-color: #000">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Rick and Morthy characters</a>
+        </div>
+    </nav>
+
+    <section class="text-center text-white pt-5 pb-5 hero">
+    	<div class="container">
+    		<img src="./assets/img/logo.png" alt="Rick and Morthy" class="hero__logo">
+    		<h2 class="pt-3 pb-4">Все персы вселенной в одном флаконе</h2>
+
+    		<div class="row g-4">
+				<div class="col-sm">
+    				<input type="text" class="form-control" placeholder="Имя" aria-label="Name" id="searchName">
+				</div>
+  				<div class="col-sm">
+    				<select class="form-select" aria-label="Default select example" id="searchStatus">
+						<option selected value="">Статус не важен</option>
+						<option value="alive">Жив</option>
+						<option value="dead">Мертв</option>
+						<option value="unknown">Неизвестно</option>
+					</select>
+  				</div>
+  				<div class="col-sm">
+    				<select class="form-select" aria-label="Default select example" id="searchGender">
+						<option selected value="">Пол не важен</option>
+						<option value="female">Женщина</option>
+						<option value="male">Мужчина</option>
+						<option value="genderless">Бесполое</option>
+						<option value="unknown">Неизвестно</option>
+					</select>
+  				</div>
+  				<div class="col-sm">
+  					<button type="button" class="btn btn-success hero__button" id="searcBtn" onclick="showCards(true)">Найти</button>
+  				</div>
+			</div>
+    	</div>
+    </section>
+
+    <section class="pt-5 pb-5 characters">
+    	<div class="container">
+    		<h2 class="pb-4 text-center text-white">Персонажи <span id="currentChars"></span>/<span id="totalChars"></span></h2>
+    		<div class="row mb-5" id="charactersList"></div>
+            <button type="button" class="characters__btn btn btn-success" id="showMoreButton" onclick="showCards()">Показать ещё</button>
+    	</div>
+    </section>
+
+	<script type="text/javascript" src="./assets/scripts/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./assets/scripts/lib/axios.min.js"></script>
+	<script type="text/javascript" src="./assets/scripts/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+.card__status {
+
+}
+
+.card__status-unknown:before {
+	display: block;
+	background-color: rgb(237, 255, 30);
+	content: '';
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.card__status-alive:before {
+	display: block;
+	background-color: rgb(85, 204, 68);
+	content: '';
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.card__status-dead:before {
+	display: block;
+	background-color: rgb(214, 61, 46);
+	content: '';
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.characters__btn.-none {
+	display: none;
+}
